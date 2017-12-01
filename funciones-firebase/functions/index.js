@@ -1,9 +1,13 @@
-const functions = require('firebase-functions');
+var functions = require('firebase-functions');
 
-// Create and Deploy Your First Cloud Functions
-// https://firebase.google.com/docs/functions/write-firebase-functions
+//
+// exports.helloWorld = functions.https.onRequest((request, response) => {
+//  response.send("Hello from Firebase, inetnto chorromil");
+//  console.log("A la verga todo :v");
+// });
 
-exports.helloWorld = functions.https.onRequest((request, response) => {
- response.send("Hello from Firebase, inetnto chorromil");
- console.log("A la verga todo :v");
-});
+exports.totalizarCarrito = functions.database
+.ref('/USUARIOS/{Key}/carritoCompras')
+.onWrite(event =>{
+  console.log("Perros Todos >:v");
+})

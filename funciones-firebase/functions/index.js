@@ -7,7 +7,18 @@ var functions = require('firebase-functions');
 // });
 
 exports.totalizarCarrito = functions.database
-.ref('/USUARIOS/{Key}/carritoCompras')
-.onWrite(event =>{
-  console.log("Perros Todos >:v");
+.ref('/USUARIOS/{USUARIOSID}/carritoCompras')
+.onWrite(event =>{ 
+	const carritoCompra = event.data.val()
+	
+	console.log(carritoCompra.vaciar.isVerified)
+
+	if (carritoCompra.vaciar.isVerified == 'true') {
+		console.log("se fue")
+		return
+	}
+	carritoCompra.vaciar.isVerified = true
+	console.log("entro  >:v")
+	const promise = event.data.ref.set(carritoCompra)
+	return promise
 })

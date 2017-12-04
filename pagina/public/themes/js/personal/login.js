@@ -114,7 +114,7 @@ function AgregarAlCarrito(){
     var labelProductosCarro = Number($("#numeroProductos").text()) + 1;
     document.getElementById("numeroProductos").innerHTML = labelProductosCarro;
 
-   ref.child("carritoCompras").push({
+   ref.child("carritoCompras" + "/" + "productos").push({
       nombre: nombre,
       precio: precio,
       cantidad: cantidad,

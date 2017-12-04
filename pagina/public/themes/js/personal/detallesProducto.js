@@ -12,7 +12,7 @@ var firebaseAuth = firebase.auth();
 var prodKey = localStorage.getItem("PROD_KEY");
 var SearchRef = firebase.database().ref("PRODUCTOS/" + prodKey);
 var userkey = localStorage.getItem("USERKEY2");
-var refCarro = firebase.database().ref("USUARIOS/" + userkey + "/" + "carritoCompras");
+var refCarro = firebase.database().ref("USUARIOS/" + userkey +"/"+"carritoCompras"+"/"+"productos");
 var prod_id;
 
 SearchRef.on("value", function(snapshot) {

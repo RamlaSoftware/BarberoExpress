@@ -63,7 +63,7 @@ function InformacionBaseDatos(nombre, apellido, correo, direccion, direccion2, c
 		apellido: apellido,
 		telefono: {telefonoCelular: telefonoCelular, telefonoFijo: telefonoFijo},
 		direccion: {direccion: direccion, direccion2: direccion2, ciudad:ciudad, informacionAdicional: informacionAdicional},
-		carritoCompras: {vaciar:"false"},
+		carritoCompras: {vaciar:"false",productos:"null"},
 		foto: "null",
 		historialCompras: "null"
 	});
